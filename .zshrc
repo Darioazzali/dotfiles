@@ -2,12 +2,10 @@
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
-setopt APPEND_HISTORY        # Append to history file
-setopt INC_APPEND_HISTORY    # Write commands immediately, not just on shell exit
+setopt APPEND_HISTORY
+setopt INC_APPEND_HISTORY 
 setopt SHARE_HISTORY
 bindkey -v
-# End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
 zstyle :compinstall filename "$HOME/.zshrc"
 autoload -Uz compinit
 compinit
@@ -22,7 +20,6 @@ zstyle ':vcs_info:*' enable git
 # Set prompt with git branch
 setopt PROMPT_SUBST
 PROMPT='%f%F{red}λ%f '
-# PROMPT='%f%F{red}λ%f%F{green}${vcs_info_msg_0_} %f> '
 alias rm='rm -i'
 alias mv="mv -i"
 alias cp="cp -i"
@@ -45,13 +42,8 @@ path+=("$HOME/.custom_man/")
 export PATH="$PATH:/home/dario/.local/bin"
 export PIPX_HOME=$HOME/.local/pipx
 
-alias francinette=/home/dario/francinette/tester.sh
-alias paco=/home/dario/francinette/tester.sh
 fpath=($HOME/.zsh/completions $fpath)
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
-
-alias mstest="bash /home/dario/42_minishell_tester/tester.sh"
-
