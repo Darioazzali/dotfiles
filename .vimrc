@@ -52,8 +52,10 @@ nmap [d :cprevious<CR>
 " Color scheme
 colorscheme habamax
 let g:netrw_banner = 0
-
+:set diffopt+=iwhiteall
 
 
 " Create backup before formatting
 "" autocmd BufWritePre *.c execute '!cp % %.' . strftime("%Y%m%d_%H%M%S") . '.bak'
+let g:user42 = 'dazzali'
+let g:mail42 = 'dazzali@student.42.fr'
