@@ -1,7 +1,7 @@
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=10000
+SAVEHIST=10000
 setopt APPEND_HISTORY
 setopt INC_APPEND_HISTORY 
 setopt SHARE_HISTORY
@@ -39,7 +39,7 @@ alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 path+=("$HOME/.custom_man/")
 
 # Created by `pipx` on 2024-12-19 10:43:01
-export PATH="$PATH:/home/dario/.local/bin"
+export PATH="$PATH:/home/dario/.local/bin:/home/dario/.cargo/bin"
 export PIPX_HOME=$HOME/.local/pipx
 
 fpath=($HOME/.zsh/completions $fpath)
@@ -47,3 +47,6 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
+# Direnv for automatically load environment variable in a folder
+eval "$(direnv hook zsh)"
+
