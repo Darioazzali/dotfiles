@@ -50,3 +50,11 @@ eval "$(pyenv init -)"
 # Direnv for automatically load environment variable in a folder
 eval "$(direnv hook zsh)"
 
+
+# pnpm
+export PNPM_HOME="/home/dario/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
